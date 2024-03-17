@@ -1,0 +1,80 @@
+header {
+  height: 70px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+header h2 {
+  font-size: 30px;
+}
+.buttonBurguer {
+  background-color: transparent;
+  border: none;
+  display: none;
+}
+.burguer {
+  height: 30px;
+}
+nav {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  gap: 20px;
+  font-size: 20px;
+  transition: all 0.5s ease-in-out;
+
+}
+nav a {
+    width: auto;
+    position: relative;
+    cursor: auto;
+    overflow: hidden;
+  }
+.visible {
+    height: 170px;
+    opacity: 1;
+
+
+  }
+  
+  
+@media (max-width: 500px) {
+  nav {
+    height: 0px;
+    overflow: hidden;
+    display: flex;
+    padding: 20px;
+    opacity: 0;
+    flex-direction: column;
+    position: absolute;
+    top: 69px;
+    right: 0px;
+    text-align: end;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0 0 15px 15px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  
+  
+  .buttonBurguer {
+    display: flex;
+    height: auto;
+  }
+}
+
+.line {
+    background-color: black;
+    height: 5px;
+    width: 0px;
+    transition: all 0.3s;
+}
+a:hover .line{
+    width: 100%;
+}
+
+
