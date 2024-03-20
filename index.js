@@ -71,7 +71,7 @@ const printBotones = () => {
     if(PRECIO <= 0 ){
       printMensaje("Introduce un precio válido")
     }else{
-      filtrarRelojes(inputPrecio.value)
+      filtrarRelojes()
     }
   })
 
