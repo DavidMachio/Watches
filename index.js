@@ -8,7 +8,7 @@ const section = document.querySelector("#app");
 
 const divBotones = document.querySelector("#botones");
 
-let MARCA = "";
+let MARCA = "Marcas";
 let PRECIO = "";
 
 
@@ -27,17 +27,21 @@ const printBotones = () => {
   const selectMarca = document.createElement("select");
   const inputPrecio = document.createElement("input");
   const option = document.createElement("option");
+  const buscar = document.createElement("button")
   const limpiar = document.createElement("button");
 
+  option.value = "Marcas"
   option.textContent = "Marcas";
   inputPrecio.placeholder = "Precio Máximo";
   inputPrecio.type = "number";
+  buscar.textContent = "Buscar"
   limpiar.textContent = "Limpiar";
 
   sectionBotones.classList = "sectionBotones";
   divButtons.classList = "containerButtons"
   divInputs.classList = "containerInputs"
 
+  buscar.classList = "buttons buscar"
   inputPrecio.classList = "buttons inputPrecio";
   selectMarca.classList = "buttons selectMarca";
   selectMarca.appendChild(option);
@@ -54,18 +58,31 @@ const printBotones = () => {
     console.log(MARCA);
     filtrarRelojes();
   });
-  inputPrecio.addEventListener("input", (ev) => {
+
+
+  /* inputPrecio.addEventListener("input", (ev) => {
     PRECIO = ev.target.value;
     console.log(PRECIO);
     filtrarRelojes();
-  });
+  }); */
+  
+  buscar.addEventListener("click", () => {
+    PRECIO= inputPrecio.value;
+    if(PRECIO <= 0 ){
+      printMensaje("Introduce un precio válido")
+    }else{
+      filtrarRelojes(inputPrecio.value)
+    }
+  })
+
+
   limpiar.addEventListener("click", () => {
     console.log("click");
     limpiarFiltros();
   });
 
   divInputs.append(selectMarca, inputPrecio);
-  divButtons.append( limpiar);
+  divButtons.append( buscar,limpiar);
   sectionBotones.append(divInputs, divButtons);
 
   divBotones.append(sectionBotones);
@@ -115,10 +132,10 @@ const printRelojes = (data) => {
 };
 
 
-const printMensaje = () => {
+const printMensaje = (textcontent) => {
   section.innerHTML = "";
   const mensaje = document.createElement("h2");
-  mensaje.textContent = "No hay relojes";
+  mensaje.textContent = textcontent;
   section.append(mensaje);
 };
 
@@ -136,7 +153,7 @@ const filtrarRelojes = () => {
   if (filtrados.length > 0) {
     printRelojes(filtrados);
   } else {
-    printMensaje();
+    printMensaje("No hay relojes");
   }
 };
 
