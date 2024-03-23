@@ -13,7 +13,7 @@ export const Contacto = () => {
     <input type="text" name="Asunto" placeholder="Asunto" />
     <textarea name="Comentario" placeholder="What about"></textarea>
     <button class="enviar" type="submit" value="Enviar">Enviar</button>
-    <input type="hidden" name="_next" value="https://watchesearch.netlify.app/" />
+    <input type="hidden" name="_next" value="https://watchesearch.netlify.app" />
     <input type="hidden" name="_captcha" value="true" />
           <input type="hidden" name="_autoresponse" value="Tu mensaje ha sido recibido correctamente, muchas gracias por contactar. Tu opinión es muy importante para mi"></input>
     
