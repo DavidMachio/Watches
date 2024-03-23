@@ -1,0 +1,63 @@
+.sectionForm {
+    min-height: calc(100vh - 140px);
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/fondoForm.webp);
+    background-size: cover;
+    background-position: bottom left;
+    filter: grayscale(100%);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 500px;
+    height: 700px;
+    border: 1px solid  rgba(172, 172, 172, 0.32);
+    border-radius: 10px;
+    background: rgba(104, 104, 104, 0.36);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(3px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.409);
+
+}
+form input, .enviar {
+    height: 40px;
+    width: 60%;
+    border-radius: 5px;
+    border: none;
+    padding-left:10px ;
+    background-color: rgba(27, 27, 27, 0.904);
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.409);
+    outline: none;
+    
+}
+.enviar:hover{
+    filter: invert(1);
+}
+form>input::placeholder {
+    color: white;
+}
+textarea::placeholder {
+    color: white;
+}
+
+textarea {
+    height: 150px;
+    width: 60%;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgba(27, 27, 27, 0.941);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.409);
+    resize: none;
+    outline: none;
+}

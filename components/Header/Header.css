@@ -30,7 +30,6 @@ nav {
 nav a {
     width: auto;
     position: relative;
-    cursor: auto;
     overflow: hidden;
   }
 .visible {
@@ -50,6 +49,7 @@ nav a {
     opacity: 0;
     flex-direction: column;
     position: absolute;
+    z-index: 100;
     top: 69px;
     right: 0px;
     text-align: end;
@@ -61,6 +61,7 @@ nav a {
   
   
   
+  
   .buttonBurguer {
     display: flex;
     height: auto;
@@ -69,7 +70,7 @@ nav a {
 
 .line {
     background-color: black;
-    height: 5px;
+    height: 3px;
     width: 0px;
     transition: all 0.3s;
 }
