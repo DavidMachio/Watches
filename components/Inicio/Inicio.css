@@ -32,20 +32,20 @@
     border: 1px solid rgba(255, 255, 255, 0.36);
     color: white;
     rotate: 90deg;
-    margin-top: 20px;
-    margin-left: -110px;
+    margin-top: -5px;
+    margin-left: -70px;
     padding-left: 30px;
-    font-size: 40px;
+    font-size: 35px;
     text-shadow: 0 0 20px black;
     height: 70px;
-    width: 300px;
+    width: 230px;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.001);
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(3px);
 }
 
-@media (max-width: 600px){
+@media (max-width: 700px){
     .mainInicio{
         flex-direction: column;
         height: 0;
