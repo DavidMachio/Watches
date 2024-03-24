@@ -7,8 +7,9 @@ header {
   justify-content: space-between;
   padding: 20px;
 }
-header h2 {
-  font-size: 30px;
+.logoHeader {
+  height: 30px;
+  width: auto;
 }
 .buttonBurguer {
   background-color: transparent;

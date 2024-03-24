@@ -80,12 +80,18 @@ export const printBotones = () => {
 export const printRelojes = (data) => {
   section.innerHTML = "";
   seccionRelojes.innerHTML = ""
-  printBotones()
+  printBotones();
+
+   const selectMarca = document.querySelector(".selectMarca");
+  const inputPrecio = document.querySelector(".inputPrecio");
+  selectMarca.value = MARCA;
+  inputPrecio.value = PRECIO;
 
   for (const reloj of data) {
     const article = document.createElement("article");
     const marca = document.createElement("h2");
     const foto = document.createElement("img");
+    const datos = document.createElement("div")
     const modelo = document.createElement("h2");
     const material = document.createElement("h3");
     const precio = document.createElement("h4");
@@ -109,13 +115,15 @@ export const printRelojes = (data) => {
 
     marca.classList = "marca";
     foto.classList = "imgReloj";
+    datos.classList = "datos";
     
     article.append(marca);
     article.append(foto);
-    article.append(modelo);
-    article.append(material);
-    article.append(precio);
-    article.append(divColores);
+    datos.append(modelo);
+    datos.append(material);
+    datos.append(precio);
+    datos.append(divColores);
+    article.append(datos)
 
     
     seccionRelojes.append(article);
@@ -148,6 +156,10 @@ export const filtrarRelojes = () => {
     printRelojes(filtrados);
   } else {
     printMensaje("No hay relojes");
+    const selectMarca = document.querySelector(".selectMarca");
+  const inputPrecio = document.querySelector(".inputPrecio");
+  selectMarca.value = MARCA;
+  inputPrecio.value = PRECIO;
   }
 };
 

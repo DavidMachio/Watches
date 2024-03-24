@@ -57,15 +57,20 @@
         align-items: center;
         justify-content: center;
         transition: all .5s ease;
+        padding: 10px;
     }
     .contenedorImg:hover {
-        min-height: 40vh;
+        min-height: 50vh;
         width: 100%;
         filter: contrast(120%);
     }
     .title {
+        height: 40px;
+        width: 150px;
+        font-size: 20px;
         rotate: 0deg;
         justify-content: center;
+        padding: 5px;
         margin: auto;
     }
 }

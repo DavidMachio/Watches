@@ -8,7 +8,7 @@ export const printHeader = () => {
     const header = document.querySelector("#header")
     const nav = 
         `
-        <h2>Watches</h2>
+        <img src="/icono.png" alt="logo de la página" class="logoHeader">
         <button class="buttonBurguer"><img src="/menu.png" class="burguer"/></button>
         <nav id="navegador">
         <a id="inicio">Inicio<div class="line"></div></a>
@@ -27,19 +27,28 @@ const printInicio = () => {
   Inicio()
   }
 
-  inicio.addEventListener("click",() => printInicio())
+  inicio.addEventListener("click",() => {
+    navElement.classList.remove("visible")
+    printInicio()
+  })
 
   const printContacto = () => {
     app.innerHTML = ""
     Contacto()
     }
-  contacto.addEventListener("click",() => printContacto())
+  contacto.addEventListener("click",() => {
+    navElement.classList.remove("visible")
+    printContacto()
+})
 
   const printPaginaRelojes = () => {
     app.innerHTML = ""
     printRelojes(relojes)
   }
-  seccionRelojes.addEventListener("click",() => printPaginaRelojes())
+  seccionRelojes.addEventListener("click",() => {
+    navElement.classList.remove("visible")
+    printPaginaRelojes()
+  })
 
 const buttonBurguer = document.querySelector(".buttonBurguer");
 const navElement = document.querySelector("#navegador");
